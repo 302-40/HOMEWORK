@@ -1,0 +1,128 @@
+/* 頁面背景顏色 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* 漢堡選單按鈕（固定在左上角） */
+#menuBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1000; /* 確保在最上層顯示 */
+}
+
+/* 側邊欄樣式 */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #2F4F4F;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+/* 側邊欄標題 */
+#sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+/* 記帳紀錄顯示區 */
+#records {
+    margin-top: 20px;
+}
+
+/* 記帳紀錄樣式 */
+.record {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.record p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* 主頁標題 */
+header h1 {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* 記帳表單 */
+form {
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* 記帳表單欄位 */
+form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* 隱藏/顯示側邊欄 */
+#sidebar.show {
+    transform: translateX(0);
+}
+
+
+/* 記帳紀錄 - 收入 */
+.record.income {
+    color: green; /* 綠色顯示收入 */
+}
+
+/* 記帳紀錄 - 支出 */
+.record.expense {
+    color: red; /* 紅色顯示支出 */
+}
